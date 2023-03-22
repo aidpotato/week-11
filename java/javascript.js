@@ -29,26 +29,45 @@
 
 // circle_area(input);
 
-"neda version"
-const radiusPara = document.querySelector('#radius');
-console.log(radiusPara);
-const resultPara = document.querySelector('#result');
-console.log(resultPara);
+// "neda version"
+// const radiusPara = document.querySelector('#radius');
+// console.log(radiusPara);
+// const resultPara = document.querySelector('#result');
+// console.log(resultPara);
 
-function calculateRadius(radias){
-    if (isNaN(radias)){
-        // alert('this is not a number');
-        resultPara.textContent = ('you entered a non number')
-    }else {
-        const area = Math.PI * radias ** 2;
-        return area;    
+// function calculateRadius(radias){
+//     if (isNaN(radias)){
+//         // alert('this is not a number');
+//         resultPara.textContent = ('you entered a non number')
+//     }else {
+//         const area = Math.PI * radias ** 2;
+//         return area;    
+//     }
+// }
+// let userValue = prompt('enter a number');
+// let result = calculateRadius(userValue);
+// radiusPara.textContent += userValue;
+
+
+// if (result !== undefined) {
+//     resultPara.textContent = (`the area with the circle with radius ${uservalue} is ${result.toFixed(2)}`)
+// }
+
+
+// make function that takes array   
+function shoppingArray(shopitems){
+    // 1. select and store refrence ul
+    //2. loop through the shooping list -> for loop
+        // 3. create li -> createElement
+        // 4. append the li to the ul -> parent.appendChild(child)
+        // 5. update the textContent if li with array item
+    const buytime = document.querySelector( '.shopping')
+    for(let item of shopitems){
+        const newLi = document.createElement("li")
+        buytime.appendChild(newLi)
+        newLi.textContent = item
     }
-}
-let userValue = prompt('enter a number');
-let result = calculateRadius(userValue);
-radiusPara.textContent += userValue;
 
-
-if (result !== undefined) {
-    alert(`the area with hte circle with radius ${uservalue} is ${result.toFixed(2)}`)
 }
+let myList = ['bread', 'cheese', 'green pepper']
+shoppingArray(myList);
