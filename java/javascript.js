@@ -1,8 +1,8 @@
-function greet(username, time = 'day'){
-    console.log(`good ${time} ${username}`);
-}
+// function greet(username, time = 'day'){
+//     console.log(`good ${time} ${username}`);
+// }
 
-greet('bob')
+// greet('bob')
 
 // const greet = function (name)
 
@@ -20,3 +20,27 @@ greet('bob')
 // }
 
 // greet('neda')
+let input = prompt('enter the radius of a circle')
+
+function circle_area(input){
+    const piy = ((input**2) * Math.PI);
+    console.log(`the area with the radius ${input} is ${piy}`)
+}
+
+circle_area(input);
+
+"neda version"
+
+function calculateRadius(radias){
+    if (isNaN(radias)){
+        alert('this is not a number')
+    }else {
+        const area = Math.PI * radias ** 2;
+        return area;
+    }
+}
+let userValue = prompt('enter a number');
+let result = calculateRadius(userValue)
+if (result !== undefined) {
+    alert('this is not a number')
+}
